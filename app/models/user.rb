@@ -31,6 +31,7 @@ class User < ApplicationRecord
     class_name: "Post"
 
     def self.find_by_credentials(username, password)
+        # debugger;
         @user = User.find_by(username: username)
         @user && @user.is_password?(password) ? @user : nil
     end
