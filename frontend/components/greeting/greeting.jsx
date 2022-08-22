@@ -1,29 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MyLinks from '../my_links';
 
-const Greeting = ({ currentUser, logout }) => {
-    let backgroundImage = <img className="background-image" src="https://t3.ftcdn.net/jpg/03/15/34/90/360_F_315349043_6ohfFyx37AFusCKZtGQtJR0jqUxhb25Y.jpg" />;
+const Greeting = ({ currentUser, logout, openModal }) => {
+    let backgroundImage = <img className="background-image" src="https://wallpaperaccess.com/full/112722.jpg" />;
 
     const sessionLinks = () => (
         <div className="greeting">
+            {backgroundImage}
+            <div id="greeting">
+            <h1 className="tumbler">Tumbler</h1>
             <nav className="greeting-logged-out">
-                {backgroundImage}
-                <Link to="/login">Login</Link>
-                &nbsp;or&nbsp;
-                <Link to="/signup">Sign up!</Link>
+                    <button id="greeting-login" onClick={() => openModal('login')}>Login</button>
+                    <button id="greeting-signup" onClick={() => openModal('signup')}>Signup</button>
+                {/* <Link id="greeting-login" to="/login">Login</Link>
+                <Link id="greeting-signup" to="/signup">Sign up!</Link> */}
             </nav>
-        </div>
-    );
-    const personalGreeting = () => (
-        <div className="greeting">
-            <hgroup className="greeting-loggedin">
-                <h2 className="header-name">Hi, {currentUser.username}!</h2>
-                <button className="greeting-button" onClick={logout}>Log Out</button>
-            </hgroup>
+            </div>
+            <MyLinks />
         </div>
     );
 
-    return currentUser ? personalGreeting() : sessionLinks();
+    return sessionLinks();
 };
 
 export default Greeting;

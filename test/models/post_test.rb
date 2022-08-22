@@ -10,6 +10,7 @@
 #  image_file_name :string
 #  likes_count     :integer          not null
 #  post_type       :string
+#  post_url        :string
 #  title           :string           not null
 #  type            :text             not null
 #  created_at      :datetime         not null

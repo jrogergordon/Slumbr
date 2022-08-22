@@ -1,0 +1,92 @@
+.loggedout-buttons{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loggedout {
+    box-sizing: border-box;
+    height: 54px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1716px;
+    padding-left: 22px;
+    padding-right: 20px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.header-button-login {
+    background-color: #00cf35;
+    color:  white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10%;
+}
+
+.header-button-login:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+
+
+.header-button-signup {
+    background-color: #00b8ff;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10%;;
+}
+
+.header-button-signup:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+
+.loggedin {
+    box-sizing: border-box;
+    height: 54px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1716px;
+    padding-left: 22px;
+    padding-right: 20px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.header-button-logout{
+        background-color: #00b8ff;
+        color: white;
+        border: none;
+        padding: 5px;
+        font-size: 15px;
+        height: 30px;
+        width: 80px;
+        box-shadow: 0 2px 4px darkslategray;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 10%; 
+}
+
+.header-button-logout:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}

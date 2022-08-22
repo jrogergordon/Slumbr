@@ -13,10 +13,9 @@ class LoginForm extends React.Component {
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.processForm({
-            email: "demo@gmail.com",
-            password: "password",
-            username: "demo_user"
+        this.props.processDemoLogin({
+            username: "demo_user",
+            password: "password"
         });
     }
 
@@ -45,26 +44,31 @@ class LoginForm extends React.Component {
     }
 
     render() {
+        let errors = this.props.errors.map(error => <li key={error}>{error}</li>)
+        let backgroundImage = <img className="background-image" src="https://www.superprof.com/blog/wp-content/uploads/2018/02/landscape-photography-tutorials-1060x596.jpg" />;
         return (
             <div className="login-form-container">
+                {backgroundImage}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Tumbler!
-                    <br />
-                    Please {this.props.formType} or {this.props.navLink}
-                    {this.renderErrors()}
                     <div className="login-form">
+                    <h3 id="welcome">Welcome to Tumbler!</h3>
+                    <br />
+                    <ul className="errors-div">
+                    {errors}
+                    </ul>
                         <br />
-                        <label>Username:
+                        <label>
                             <input type="text"
+                                placeholder='Username'
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input-username"
                             />
                         </label>
                         <br />
-                        {this.props.currentUser}
-                        <label>Password:
+                        <label>
                             <input type="password"
+                                placeholder='Password'
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input-password"
@@ -72,7 +76,7 @@ class LoginForm extends React.Component {
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value="login" />
-                        <button onClick={this.handleDemo}>Demo Login</button>
+                        <button id="demo-login" onClick={this.handleDemo}>Demo Login</button>
                     </div>
                 </form>
             </div>

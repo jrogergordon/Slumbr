@@ -10,6 +10,7 @@
 #  image_file_name :string
 #  likes_count     :integer          not null
 #  post_type       :string
+#  post_url        :string
 #  title           :string           not null
 #  type            :text             not null
 #  created_at      :datetime         not null
@@ -23,4 +24,11 @@
 #  index_posts_on_parent_post_id  (parent_post_id)
 #
 class Post < ApplicationRecord
+
+    validates :author_id, presence: true
+
+    belongs_to :author,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: "User"
 end

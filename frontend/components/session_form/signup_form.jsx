@@ -14,10 +14,9 @@ class SignupForm extends React.Component {
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.processForm({
-            email: "demo@gmail.com",
-            password: "password",
-            username: "demo_user"
+        this.props.processDemoLogin({
+            username: "demo_user",
+            password: "password"
         });
     }
 
@@ -46,17 +45,19 @@ class SignupForm extends React.Component {
     }
 
     render() {
+        let backgroundImage = <img className="background-image" src="https://cdn.mos.cms.futurecdn.net/koJs46qPG4rPsL6KohQac3.jpg" />;
         return (
             <div className="signup-form-container">
+                {backgroundImage}
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     Welcome to Tumbler!
                     <br />
-                    Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="signup-form">
                         <br />
                         <label>Username:
                             <input type="text"
+                                placeholder='Username'
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input-username"
@@ -65,6 +66,7 @@ class SignupForm extends React.Component {
                         <br />
                         <label>Email:
                             <input type="text"
+                                placeholder='Email'
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="signup-input-username"
@@ -73,6 +75,7 @@ class SignupForm extends React.Component {
                         <br />
                         <label>Password:
                             <input type="password"
+                                placeholder='Password'
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="signup-input-password"
@@ -80,7 +83,7 @@ class SignupForm extends React.Component {
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value="signup" />
-                        <button onClick={this.handleDemo}>Demo Login</button>
+                        <button id="demo-signup" onClick={this.handleDemo}>Demo Login</button>
                     </div>
                 </form>
             </div>

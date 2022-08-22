@@ -53,7 +53,8 @@ export const signup = (user) => dispatch => {
 };
 
 export const logout = () => dispatch => {
-    return SessionApiUtils.logout().then(() => {
+    return SessionApiUtils.logout()
+        .then(() => {
         return dispatch(logoutCurrentUser());
     });
 };
