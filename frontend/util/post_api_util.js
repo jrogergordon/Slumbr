@@ -1,20 +1,20 @@
 export const fetchAllPosts = () => {
     return $.ajax({
-        method: "get",
+        method: "GET",
         url: "/api/posts",
     });
 };
 
 export const fetchPost = (id) => {
     return $.ajax({
-        method: "get",
+        method: "GET",
         url: `api/posts/${id}`
     });
 };
 
 export const createPost = (post) => {
     return $.ajax({
-        method: "post",
+        method: "POST",
         url: "/api/posts",
         data: { post }
     });
@@ -22,7 +22,7 @@ export const createPost = (post) => {
 
 export const updatePost = (post) => {
     return $.ajax({
-        method: "patch",
+        method: "PATCH",
         url: `api/posts/${post.id}`,
         data: { post }
     });
@@ -40,7 +40,7 @@ export const createMediaPost = formData => {
 
 export const editMediaPost = (formData, post) => {
     return $.ajax({
-        method: "patch",
+        method: "PATCH",
         url: `/api/posts/${post.id}`,
         contentType: false,
         processData: false,
@@ -52,7 +52,7 @@ export const editMediaPost = (formData, post) => {
 
 export const deletePost = (id) => {
     return $.ajax({
-        method: "delete",
+        method: "DELETE",
         url: `api/posts/${id}`
     });
 };

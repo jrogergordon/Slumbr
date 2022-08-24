@@ -4,7 +4,7 @@ export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 
-// payload because we get back posts and user info from jbuilder
+
 const receiveAllPosts = (posts) => {
     return {
         type: RECEIVE_ALL_POSTS,
@@ -26,8 +26,8 @@ const removePost = (id) => {
     }
 }
 
-export const fetchPosts = () => dispatch => {
-    return PostApiUtil.fetchPosts().then((posts) => {
+export const fetchAllPosts = () => dispatch => {
+    return PostApiUtil.fetchAllPosts().then((posts) => {
         return dispatch(receiveAllPosts(posts));
     });
 };

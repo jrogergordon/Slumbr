@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import CreatePostContainer from '../posts/create_post_form_container';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -10,6 +11,9 @@ function Modal({ modal, closeModal }) {
     }
     let component;
     switch (modal) {
+        case 'create-text':
+            component = <CreatePostContainer postType="text" />;
+            break;
         case 'login':
             component = <LoginFormContainer />;
             break;
@@ -30,7 +34,8 @@ function Modal({ modal, closeModal }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal,
+        currentUser: state.entities.users[state.session.id]
     };
 };
 

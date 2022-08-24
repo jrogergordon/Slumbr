@@ -1,0 +1,117 @@
+.create-text-post-modal {
+    width: 240px;
+    border: 15px solid white;
+    padding: 150px;
+    margin: 20px;
+    background-color: white;
+}
+
+#post-creation {
+    position: relative;
+    left: -130px; 
+    top: 2px
+}
+
+
+.delete-post-creation {
+    border-radius: 3px;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+
+.submission-buttons {
+    display: flex;
+}
+
+.delete-post-creation {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10%;
+}
+
+.delete-post-creation:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+.submit-post {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10%;
+}
+
+.submit-post:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+.create-post-title {
+    font-size: 35px;
+    min-height: 37px;
+    border: none;
+    position: relative;
+}
+
+.create-post-content {
+    resize: none;
+    width: 500px;
+    height: 50px;
+    font-size: 18px;
+    position: relative;
+    left: 5px;
+    border: none;
+    inline-size: 150px;
+    overflow-wrap: break-word;
+}
+
+#post-creation {
+    position: relative;
+    top: -80px;
+}
+
+#creation-username {
+    position: relative;
+    left: -130px;
+    top: -120px;
+    border-bottom: 4px solid lightgray;
+}
+
+.submission-buttons {
+    position: relative;
+    top: 140px;
+    /* box-sizing: border-box;
+    border-left: 200px; */
+    border-top: 4px solid black;
+}
+
+.submit-post {
+    position: relative;
+    left: 300px;
+    top: 10px;
+}
+
+.delete-post-creation {
+    position: relative;
+    right: 210px;
+    top: 10px;
+}

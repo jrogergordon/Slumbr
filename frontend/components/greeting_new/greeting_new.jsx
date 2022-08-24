@@ -17,7 +17,7 @@ const GreetingNew = ({ currentUser, logout }) => {
         </nav>
     );
     const personalGreeting = () => (
-        <hgroup className="header-group">
+        <hgroup className="loggedout">
             <div className='loggedin'>
                 <button className="header-button-logout" onClick={logout}>Log Out</button>
             </div>

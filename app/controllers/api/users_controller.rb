@@ -11,9 +11,8 @@ class Api::UsersController < ApplicationController
     end
 
     def index
-        @user = User.all
-        # render :index
-        render json: ["all da users"]
+        @users = User.all
+        render :index
     end
 
     def show

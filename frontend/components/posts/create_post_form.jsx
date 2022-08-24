@@ -1,72 +1,76 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
-class PostForm extends React.Component {
+class CreatePostForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.post;
+        this.state = {
+            title: '',
+            content: '',
+            post_type: 'text',
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleInput(field) {
+    update(field) {
         return e => this.setState({
-            [field]: e.target.value
+            [field]: e.currentTarget.value
         });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(this.props.closeModal());
+        const post = Object.assign({}, this.state);
+        this.props.createPost(post);
+    }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render() {
-
-        let title = this.props.formType === "Reblog" ?
-            <p className="title-text">{this.state.title}</p> :
-            <input className="title-text"
-                type="text"
-                value={this.state.title}
-                onChange={this.handleInput("title")}
-                placeholder="Title"
-            />
-
-        let content = this.props.formType === "Reblog" ?
-            <div className="content-text"><p></p>{this.props.post.content}</div> :
-            <textarea className="content-text"
-                type="text"
-                value={this.state.content}
-                onChange={this.handleInput("content")}
-                placeholder="Your text here"
-            />
-
-        let reblogDescription = this.props.post.reblog_post_id ?
-            <textarea className="content-text"
-                type="text"
-                value={this.state.reblog_description}
-                onChange={this.handleInput("reblog_description")}
-                placeholder="Your text here"
-            /> :
-            <span></span>
+        let errors = this.props.errors.map(error => <li key={error}>{error}</li>)
 
         return (
+            <div className="create-text-post-modal">
+                <div id="creation-username">
+                    {this.props.currentUser.username}
+                </div>
+                <div id="post-creation">    
+                    <input type="text"
+                        placeholder='Title'
+                        value={this.state.title}
+                        onChange={this.update('title')}
+                        className="create-post-title"
+                    />
+                    <input type="textarea"
+                        placeholder='Your Content Here!'
+                        value={this.state.content}
+                        onChange={this.update('content')}
+                        className="create-post-content"
+                    />
+                </div>
+                <div className='submission-buttons'>
+                    <button className='submit-post'
+                        onClick={this.handleSubmit}>
+                        Submit
+                    </button>
 
-            <div className="form_container">
-                <div className="author_name">{this.props.currentUser.username}</div>
-                <form className="text-form" onSubmit={this.handleSubmit}>
-                    {title}
-
-                    {content}
-
-                    {reblogDescription}
-
-                    <div className="post-form-footer">
-                        <button onClick={this.props.closeModal} className="close-modal">Close</button>
-                        <input className="submit-post" type="submit" value={this.props.formType} />
-                    </div>
-                </form>
+                    <button className='delete-post-creation'
+                        onClick= {this.props.closeModal}>
+                            Discard
+                    </button>
+                </div>
             </div>
-        )
+        );
     }
 }
 
-export default withRouter(PostForm);
+export default CreatePostForm;

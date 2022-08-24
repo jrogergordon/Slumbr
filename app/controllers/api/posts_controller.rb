@@ -2,6 +2,7 @@ class Api::PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         @post.author_id = current_user.id
+        @post.likes_count = 0
 
         if @post.save
         render :show
@@ -43,8 +44,8 @@ class Api::PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:title, :content, :type, :author_id,
+        params.require(:post).permit(:title, :content, :author_id,
             :likes_count, :parent_post_id, :image_file_name, :file_name, 
-            :file_type, :file_size, :post_url, :photo)
+            :file_type, :file_size, :post_url, :photo, :post_type)
     end
 end

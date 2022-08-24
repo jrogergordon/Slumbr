@@ -1,3 +1,7 @@
+.header {
+    background-color: #001935;
+}
+
 .loggedout-buttons{
     align-items: center;
     display: flex;
@@ -14,6 +18,7 @@
     padding-right: 20px;
     width: 100%;
     padding-top: 10px;
+    border-color: white;    
 }
 
 .header-button-login {

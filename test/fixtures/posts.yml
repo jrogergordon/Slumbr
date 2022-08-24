@@ -3,7 +3,7 @@
 # Table name: posts
 #
 #  id              :bigint           not null, primary key
-#  content         :text             not null
+#  content         :string           not null
 #  file_name       :string
 #  file_size       :integer
 #  file_type       :string
@@ -12,7 +12,6 @@
 #  post_type       :string
 #  post_url        :string
 #  title           :string           not null
-#  type            :text             not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  author_id       :integer          not null

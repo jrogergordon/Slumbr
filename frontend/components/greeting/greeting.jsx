@@ -17,7 +17,6 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                 <Link id="greeting-signup" to="/signup">Sign up!</Link> */}
             </nav>
             </div>
-            <MyLinks />
         </div>
     );
 

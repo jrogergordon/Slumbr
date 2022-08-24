@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PostBar from './post_nav';
+import PostBar from './post_bar';
 import { openModal } from '../../actions/modal_actions';
 
 const msp = (state) => {

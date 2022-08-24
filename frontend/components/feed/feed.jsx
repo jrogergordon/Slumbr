@@ -1,19 +1,23 @@
 import React from 'react';
-// import PostNavContainer from '../post_nav/post_nav_container';
-// import NavbarContainer from '../navbar/navbar_container';
-// import PostIndexContainer from '../posts/post_index_container';
-// import Avatar from '../avatar/avatar';
-// import AboutMe from '../greeting/about-me';
-// import ExploreIndexItem from '../explore/explore_index_item_container';
-// import UserMini from '../avatar/user-mini';
-// import Modal from '../modal/modal';
+import { Link } from 'react-router-dom';
+import MyLinks from '../my_links';
+import PostBar from '../post_bar/post_bar_container.js'
+import FeedPosts from '../feed_posts/feed_posts_container.js'
 
-class Feed extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+const Feed = ({ currentUser, logout, openModal }) => {
 
-    componentDidMount() {
-        this.props.fetchAllUsers();
-    }
-}
+    const sessionLinks = () => (
+        <div className="feed-page">
+            <div id="post-bar">
+                <PostBar/>
+            </div>
+            <div id="all-posts">
+                <FeedPosts/>
+            </div>
+        </div>
+    );
+
+    return sessionLinks();
+};
+
+export default Feed;
