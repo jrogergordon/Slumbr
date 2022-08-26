@@ -15,19 +15,18 @@ class FeedPosts extends React.Component {
     }
 
     render() {
-
         let posts = this.props.posts.map(post =>
             <FeedPostItemContainer
             post={post}
             key={ post.id }
+            users={this.props.users}
             />)
 
         return(
             <div className="feed-posts">
-                Hello!
-                <div className='landing-feed'>
+                <ul className='landing-feed'>
                     { posts }
-                </div>
+                </ul>
             </div>
         )
     }

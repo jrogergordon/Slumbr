@@ -36,6 +36,10 @@ class CreatePostForm extends React.Component {
     }
 
     render() {
+
+        if (!this.props.currentUser) {
+            return "";
+        } else {
         let errors = this.props.errors.map(error => <li key={error}>{error}</li>)
 
         return (
@@ -50,7 +54,8 @@ class CreatePostForm extends React.Component {
                         onChange={this.update('title')}
                         className="create-post-title"
                     />
-                    <input type="textarea"
+                    <textarea type="text"
+                        wrap="hard"
                         placeholder='Your Content Here!'
                         value={this.state.content}
                         onChange={this.update('content')}
@@ -70,6 +75,7 @@ class CreatePostForm extends React.Component {
                 </div>
             </div>
         );
+    }
     }
 }
 

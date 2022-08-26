@@ -21,7 +21,6 @@
     /* float: left; */
     cursor: pointer;
     padding: 0 47px;
-    border-right: 1px solid lightgray;
 }
 
 .post_buttons>li:last-child {
@@ -32,7 +31,7 @@
     font-size: 38px;
 }
 
-.post_buttons>li:hover .post_button {
+.post_buttons>li:hover {
     transform: translateY(-4px);
 }
 
@@ -41,4 +40,16 @@
     font-size: 15px;
     padding-top: 10px;
     text-align: center;
+}
+
+.post-button-text {
+    width: 30px;
+    height: 30px;
+    padding-top: 20px;
+    left: -10px;
+}
+
+.post-bar-words {
+    position: relative;
+    top: -10px;
 }

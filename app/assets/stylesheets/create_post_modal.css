@@ -1,15 +1,17 @@
 .create-text-post-modal {
+    max-height: 180px;
     width: 240px;
-    border: 15px solid white;
+
     padding: 150px;
     margin: 20px;
     background-color: white;
+    border-radius: 10px;
 }
 
 #post-creation {
     position: relative;
     left: -130px; 
-    top: 2px
+    top: 2px;
 }
 
 
@@ -74,14 +76,12 @@
 
 .create-post-content {
     resize: none;
-    width: 500px;
-    height: 50px;
+    width: 470px;
+    height: 200px;
     font-size: 18px;
     position: relative;
     left: 5px;
     border: none;
-    inline-size: 150px;
-    overflow-wrap: break-word;
 }
 
 #post-creation {
@@ -97,21 +97,23 @@
 }
 
 .submission-buttons {
+    left: -130px;
+    width: 500px;
     position: relative;
-    top: 140px;
+    top: 0px;
     /* box-sizing: border-box;
     border-left: 200px; */
-    border-top: 4px solid black;
+    border-top: 1px solid gray;
 }
 
 .submit-post {
     position: relative;
-    left: 300px;
+    left: 420px;
     top: 10px;
 }
 
 .delete-post-creation {
     position: relative;
-    right: 210px;
+    right: 80px;
     top: 10px;
 }

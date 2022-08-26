@@ -1,5 +1,107 @@
 #all-posts {
     display: flex;
     position: relative;
-    right: -745px;
+    justify-content: space-evenly;
+    right: 0px;
+}
+
+.feed-item {
+    background-color: white;
+    list-style: none;
+}
+
+#space-between-posts {
+    height: 30px;
+}
+
+.trash-button {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-post-button {
+    font-size: 38px;
+}
+
+.feed-post-item {
+    display: flex;
+    min-height: 200px;
+}
+
+.user-avatar {
+    height: 66px;
+    border-radius: 10px;
+}
+.feed-item {
+    border-radius: 5px;
+}
+
+.feed-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 540px;
+    background-color: white;
+}
+
+.post-title {
+    font-size: 40px;
+    font-family: bold;
+    width: 500px;
+}
+
+.post-body {
+    font-size: 12px;
+    resize: none;
+    border: none;
+    width: 400px;
+    padding-left: 10px;
+}
+
+.avatar-post-space {
+    width: 20px;
+}
+
+#post-avatar {
+object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.post-author {
+    position: relative;
+    font-weight: bold;
+}
+
+.post-header {
+    padding-top: 10px;
+    position: relative;
+    height: 30px;
+}
+
+.post-content {
+    min-height: 100px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-text {
+    position: relative;
+    left: 20px;
+}
+
+.likes-count {
+    position: relative;
+    top: 10px;
+}
+
+.delete-my-post {
+    position: relative;
+    left: -25px;
 }

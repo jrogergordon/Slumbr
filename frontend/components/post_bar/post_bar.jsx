@@ -7,16 +7,28 @@ const PostBar = ({ currentUser, openModal }) => {
         <>
             <ul className="post_buttons">
                 <li onClick={() => openModal('create-text')}>
-                    <div><p className="post_button text">Aa</p><span>Text</span></div>
+                    <div>
+                        <img className="post-button-text" src={window.theT} />
+                        <span className="post-bar-words">Text</span>
+                    </div>
                 </li>
                 <li onClick={() => openModal('create-text')}>
-                    <div><i className="post_button fas fa-camera"></i><span>Photo</span></div>
+                    <div>
+                        <img className="post-button-text"  src={window.cameraLogo} />
+                        <span className="post-bar-words">Photo</span>
+                    </div>
                 </li>
                 <li onClick={() => openModal('create-text')}>
-                    <div><i className="post_button fas fa-quote-right"></i><span>Quote</span></div>
+                    <div>
+                        <img className="post-button-text" src={window.quoteLogo} />
+                        <span className="post-bar-words">Quote</span>
+                    </div>
                 </li>
                 <li onClick={() => openModal('create-text')}>
-                    <div><i className="post_button fas fa-link"></i><span>Link</span></div>
+                    <div>
+                        <img className="post-button-text" src={window.link} />
+                        <span className="post-bar-words">Link</span>
+                    </div>
                 </li>
             </ul>
         </>

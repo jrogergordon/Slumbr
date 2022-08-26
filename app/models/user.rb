@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  avatar_image    :string
 #  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null

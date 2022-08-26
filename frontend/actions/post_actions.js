@@ -40,7 +40,7 @@ export const fetchPost = (id) => dispatch => {
 
 export const createPost = (post) => dispatch => {
     return PostApiUtil.createPost(post).then((post) => {
-        return dispatch(receivePost(post.post));
+        dispatch(receivePost(post));
     });
 };
 
