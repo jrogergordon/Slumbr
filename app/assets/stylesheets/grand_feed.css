@@ -46,11 +46,7 @@
     background-color: white;
 }
 
-.post-title {
-    font-size: 40px;
-    font-family: bold;
-    width: 500px;
-}
+
 
 .post-body {
     font-size: 12px;
@@ -58,6 +54,7 @@
     border: none;
     width: 400px;
     padding-left: 10px;
+    word-wrap: break-word;
 }
 
 .avatar-post-space {
@@ -104,4 +101,9 @@ object-fit: cover;
 .delete-my-post {
     position: relative;
     left: -25px;
+}
+
+.post-title {
+    font-size: 30px;
+    word-wrap: break-word;
 }

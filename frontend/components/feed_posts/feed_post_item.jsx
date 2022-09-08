@@ -71,12 +71,12 @@ class FeedPostsItem extends React.Component {
                                 <p className='post-author'>{this.props.users[(this.props.post.author_id) - 1].username}</p>
                             </div>
                             <div className="post-content">
-                                <div className="post-title">
+                                <h3 className="post-title">
                                     {this.props.post.title}
-                                </div>
-                                <textarea readOnly className="post-body">
+                                </h3>
+                                <p readOnly className="post-body">
                                     {this.props.post.content}
-                                </textarea>
+                                </p>
                             </div>
 
                             <div className="post-footer">
