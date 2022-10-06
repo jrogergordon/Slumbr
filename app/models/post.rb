@@ -30,4 +30,31 @@ class Post < ApplicationRecord
     primary_key: :id,
     foreign_key: :author_id,
     class_name: "User"
+
+    has_many :likes,
+    primary_key: :id,
+    foreign_key: :post_id,
+    class_name: "Like"
+
+    has_many :likers,
+    through: :likes,
+    source: :user
+
+  def likers_ids
+    liker_ids = []
+    self.likers.each do |liker|
+      liker_ids << liker.id
+    end
+
+    return liker_ids
+  end  
+  
+  def followers_ids
+    follower_ids = []
+    self.author.followers.each do |follow|
+      follower_ids << follow.follower_id
+    end
+
+    return follower_ids
+  end
 end

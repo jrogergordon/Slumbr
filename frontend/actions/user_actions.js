@@ -1,3 +1,4 @@
+import * as PostApiUtil from '../util/post_api_util';
 import * as UserAPIUtil from '../util/user_api_util';
 
 export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
@@ -28,3 +29,11 @@ export const fetchUser = (id) => dispatch => {
         return dispatch(receiveUser(user))
     });
 }
+
+export const followUser = id => dispatch => {
+    return UserAPIUtil.createFollow(id);
+};
+
+export const unfollowUser = id => dispatch => {
+    return UserAPIUtil.deleteFollow(id);
+};

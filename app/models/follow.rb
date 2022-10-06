@@ -14,4 +14,16 @@
 #  index_follows_on_following_id  (following_id)
 #
 class Follow < ApplicationRecord
+  validates :following_id, :follower_id, presence: true
+  validates :follower, uniqueness: { scope: :following }
+
+  belongs_to :following,
+    primary_key: :id,
+    foreign_key: :following_id,
+    class_name: "User"
+
+  belongs_to :follower,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: "User"    
 end

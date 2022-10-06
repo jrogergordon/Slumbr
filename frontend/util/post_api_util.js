@@ -22,37 +22,29 @@ export const createPost = (post) => {
 
 export const updatePost = (post) => {
     return $.ajax({
-        method: "PATCH",
+        method: "patch",
         url: `api/posts/${post.id}`,
         data: { post }
-    });
-};
-
-export const createMediaPost = formData => {
-    return $.ajax({
-        method: 'POST',
-        url: 'api/posts',
-        contentType: false,
-        processData: false,
-        data: formData
-    });
-};
-
-export const editMediaPost = (formData, post) => {
-    return $.ajax({
-        method: "PATCH",
-        url: `/api/posts/${post.id}`,
-        contentType: false,
-        processData: false,
-        data: formData,
-    });
-};
-
-
+    })
+}
 
 export const deletePost = (id) => {
     return $.ajax({
         method: "DELETE",
         url: `api/posts/${id}`
+    });
+};
+
+export const createLike = id => {
+    return $.ajax({
+        method: 'POST',
+        url: `api/posts/${id}/like`
+    });
+};
+
+export const deleteLike = id => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `api/posts/${id}/like`
     });
 };
