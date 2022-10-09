@@ -137,4 +137,5 @@ object-fit: cover;
     background-color: rgb(23, 24, 71);
     box-shadow: 0 0 2px black;
     transform: translateY(2px);
+    opacity: 0;
 }
