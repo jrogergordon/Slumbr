@@ -12,19 +12,19 @@ const PostBar = ({ currentUser, openModal }) => {
                         <span className="post-bar-words">Text</span>
                     </div>
                 </li>
-                <li onClick={() => openModal('create-text')}>
+                <li onClick={() => openModal('create-photo')}>
                     <div>
                         <img className="post-button-text"  src={window.cameraLogo} />
                         <span className="post-bar-words">Photo</span>
                     </div>
                 </li>
-                <li onClick={() => openModal('create-text')}>
+                <li onClick={() => openModal('create-quote')}>
                     <div>
                         <img className="post-button-text" src={window.quoteLogo} />
                         <span className="post-bar-words">Quote</span>
                     </div>
                 </li>
-                <li onClick={() => openModal('create-text')}>
+                <li onClick={() => openModal('create-link')}>
                     <div>
                         <img className="post-button-text" src={window.link} />
                         <span className="post-bar-words">Link</span>

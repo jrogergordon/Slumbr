@@ -3,11 +3,7 @@ import React from 'react';
 class CreatePostForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            title: '',
-            content: '',
-            post_type: 'text',
-        };
+        this.state = this.props.post
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -20,7 +16,7 @@ class CreatePostForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const post = Object.assign({}, this.state);
-        this.props.createPost(post);
+        this.props.PostAction(post);
     }
 
     renderErrors() {

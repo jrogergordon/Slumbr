@@ -10,6 +10,7 @@ class FeedPostsItem extends React.Component {
         this.likeButton = this.likeButton.bind(this);
         this.renderFollow = this.renderFollow.bind(this);
         this.renderDeleteButtons = this.renderDeleteButtons.bind(this);
+        this.render = this.render.bind(this);
 
     }
 
@@ -58,12 +59,87 @@ class FeedPostsItem extends React.Component {
 
     renderDeleteButtons() {
         if (this.props.post.author_id === this.props.currentUserId) {
+            if (this.props.post.post_type === "quote") {
+                return (
+                    <div>
+                        <button className="delete-post-button"
+                            onClick={() => this.props.openModal(["delete_confirm", this.props.post])} >
+                            &nbsp; <img className='trash-button' src={window.trash} />
+                        </button>
+                        <button className='edit-post-button'
+                            onClick={() => this.props.openModal(["edit_quote", this.props.post])} >
+                            <img className='trash-button' src={window.edit} />
+                        </button>
+                        Likes: {this.props.post.likes}
+                    </div>
+                );
+            } else if (this.props.post.post_type === "text") {
+                return (
+                    <div>
+                        <button className="delete-post-button"
+                            onClick={() => this.props.openModal(["delete_confirm", this.props.post])} >
+                            &nbsp; <img className='trash-button' src={window.trash} />
+                        </button>
+                        <button className='edit-post-button'
+                            onClick={() => this.props.openModal(["edit_text", this.props.post])} >
+                            <img className='trash-button' src={window.edit} />
+                        </button>
+                        Likes: {this.props.post.likes}
+                    </div>
+                )
+            } else if (this.props.post.post_type === "link") {
+                return (
+                <div>
+                    <button className="delete-post-button"
+                        onClick={() => this.props.openModal(["delete_confirm", this.props.post])} >
+                        &nbsp; <img className='trash-button' src={window.trash} />
+                    </button>
+                        <button className='edit-post-button'
+                            onClick={() => this.props.openModal(["edit_link", this.props.post])} >
+                            <img className='trash-button' src={window.edit} />
+                        </button>
+                        Likes: {this.props.post.likes}
+                </div>
+                )
+            } else if (this.props.post.post_type === "image") {
+                return (7);
+            }
+        }
+    }
+
+    renderPost() {
+        if(this.props.post.post_type === "quote") {
             return (
-                <button className="delete-post-button"
-                    onClick={() => this.props.openModal(["delete_confirm", this.props.post])} >
-                    <img className='trash-button' src={window.trash}/>
-                </button>
+                <div className="post-content">
+                    <h3 className="quote-post-body">
+                        "{this.props.post.content}"
+                    </h3>
+                    <p readOnly className="quote-post-title">
+                       &nbsp; &nbsp; &nbsp; -{this.props.post.title}
+                    </p>
+                </div>
             );
+        } else if (this.props.post.post_type === "text") {
+            return (
+                <div className="post-content">
+                    <h3 className="post-title">
+                        {this.props.post.title}
+                    </h3>
+                    <p readOnly className="post-body">
+                        {this.props.post.content}
+                    </p>
+                </div>
+            );
+        } else if (this.props.post.post_type === "link") {
+            if(this.props.post.title.length > 0) {
+                return (
+                    <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.title}</a>
+                )
+            } else return (
+                <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.content}</a>
+            );
+        } else if (this.props.post.post_type === "image") {
+            return (7);
         }
     }
 
@@ -120,14 +196,15 @@ class FeedPostsItem extends React.Component {
                                 <p className='post-author'>{this.props.users[(this.props.post.author_id) - 1].username} {this.renderFollow()}</p>
                                
                             </div>
-                            <div className="post-content">
+                            {this.renderPost()}
+                            {/* <div className="post-content">
                                 <h3 className="post-title">
                                     {this.props.post.title}
                                 </h3>
                                 <p readOnly className="post-body">
                                     {this.props.post.content}
                                 </p>
-                            </div>
+                            </div> */}
 
                             <div className="post-footer">
                                 {this.likeButton()}

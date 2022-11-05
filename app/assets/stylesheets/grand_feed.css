@@ -137,5 +137,31 @@ object-fit: cover;
     background-color: rgb(23, 24, 71);
     box-shadow: 0 0 2px black;
     transform: translateY(2px);
-    opacity: 0;
+}
+
+.quote-post-title {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 10px;
+    
+}
+
+.quote-post-body {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.post-link {
+    min-height: 37px;
+    resize: none;
+    width: 470px;
+    position: relative;
+    left: 5px;
+    border: none;
+    font-size: 20px;
+    word-wrap: break-word;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px solid blue;
+    color: blue;
 }

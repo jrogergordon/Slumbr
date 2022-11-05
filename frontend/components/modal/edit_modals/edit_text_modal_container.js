@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
-import CreatePostForm from './create_post_form';
-import { createPost } from '../../actions/post_actions';
-import { closeModal } from '../../actions/modal_actions';
+import CreatePostForm from '../../posts/create_post_form';
+import { updatePost } from '../../../actions/post_actions';
+import { closeModal } from '../../../actions/modal_actions';
 
 const mSTP = ({ session, entities, errors }) => {
     return {
-        post: { title: "", content: "", post_type: "text", author_id: entities.users[session.id] },
         errors: errors.session,
         currentUser: entities.users[session.id],
     };
@@ -13,7 +12,7 @@ const mSTP = ({ session, entities, errors }) => {
 
 const mDTP = dispatch => {
     return {
-        PostAction: (post) => dispatch(createPost(post)),
+        PostAction: (post) => dispatch(updatePost(post)),
         closeModal: () => dispatch(closeModal())
     };
 };
