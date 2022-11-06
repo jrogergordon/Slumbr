@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { signup } from '../../actions/session_actions';
 import { login } from '../../actions/session_actions'
 import SignupForm from './signup_form';
+import { closeModal } from "../../actions/modal_actions.js"
 
 
 const mSTP = ({ session, errors }) => {

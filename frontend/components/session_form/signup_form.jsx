@@ -45,16 +45,19 @@ class SignupForm extends React.Component {
     }
 
     render() {
-        let backgroundImage = <img className="background-image" src="https://cdn.mos.cms.futurecdn.net/koJs46qPG4rPsL6KohQac3.jpg" />;
         return (
             <div className="signup-form-container">
-                {backgroundImage}
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
-                    Welcome to Tumbler!
+                    <div className='signup-title'>
+                        Welcome to Tumbler!
+                    </div>
                     <br />
                     {this.renderErrors()}
                     <div className="signup-form">
+                        <button onClick={this.props.closeModal} className='button' id="close-signup-button">x</button>
                         <br />
+                        <div className='signup-credentials'>
+                            <div>
                         <label>Username:
                             <input type="text"
                                 placeholder='Username'
@@ -81,9 +84,13 @@ class SignupForm extends React.Component {
                                 className="signup-input-password"
                             />
                         </label>
+                        </div>
+                        </div>
                         <br />
-                        <input className="session-submit" type="submit" value="signup" />
-                        <button id="demo-signup" onClick={this.handleDemo}>Demo Login</button>
+                        <div className='signup-buttons'>
+                        <input className="button" id="signup-button" type="submit" value="Signup" />
+                        <button className='button' id="demo-signup" onClick={this.handleDemo}>Demo Login</button>
+                        </div>
                     </div>
                 </form>
             </div>
