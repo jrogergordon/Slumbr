@@ -11,6 +11,8 @@ const Feed = ({ currentUser, logout, openModal }) => {
             <div id="post-bar">
                 <PostBar/>
             </div>
+            <div className='all-users'>
+            </div>
             <div id="all-posts">
                 <FeedPosts/>
             </div>

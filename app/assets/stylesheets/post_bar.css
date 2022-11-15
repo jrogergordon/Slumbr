@@ -5,16 +5,16 @@
 }
 
 .post_buttons {
-    padding: 0;
-        margin: 0 0 30px 0;
-        display: flex;
-        flex-direction: row;
-        background-color: white;
-        border-radius: 5px;
-        max-width: 540px;
-        height: 90px;
-        justify-content: space-evenly;
-        align-items: center;
+    padding: 1%;
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 5px;
+    max-width: 540px;
+    height: 90px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .post_buttons>li {
@@ -43,8 +43,8 @@
 }
 
 .post-button-text {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding-top: 20px;
     left: -10px;
 }
@@ -52,4 +52,11 @@
 .post-bar-words {
     position: relative;
     top: -10px;
+}
+
+.post-bar-div-box {
+    width: 20px;
+    height: 80px;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
 }

@@ -48,16 +48,17 @@ class LoginForm extends React.Component {
         let backgroundImage = <img className="background-image" src="https://www.superprof.com/blog/wp-content/uploads/2018/02/landscape-photography-tutorials-1060x596.jpg" />;
         return (
             <div className="login-form-container">
-                {backgroundImage}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="login-form">
-                    <h3 id="welcome">Welcome to Tumbler!</h3>
+                    <h3 className='login-title'>Welcome to Tumbler!</h3>
+                    <button onClick={this.props.closeModal} className='button' id="close-login-button">x</button>
                     <br />
                     <ul className="errors-div">
                     {errors}
                     </ul>
                         <br />
-                        <label>
+                        <div className='login-credentials'>
+                        <label className='signup-cred-item'> Username
                             <input type="text"
                                 placeholder='Username'
                                 value={this.state.username}
@@ -66,7 +67,7 @@ class LoginForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label className='signup-cred-item'>Password
                             <input type="password"
                                 placeholder='Password'
                                 value={this.state.password}
@@ -74,9 +75,12 @@ class LoginForm extends React.Component {
                                 className="login-input-password"
                             />
                         </label>
+                        </div>
                         <br />
-                        <input className="session-submit" type="submit" value="login" />
-                        <button id="demo-login" onClick={this.handleDemo}>Demo Login</button>
+                        <div className='login-buttons'>
+                        <input className="button" id='login-button' type="submit" value="Login" />
+                        <button  className="button" id="demo-login" onClick={this.handleDemo}>Demo Login</button>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
                         <br />
                         <div className='signup-credentials'>
                             <div>
-                        <label>Username:
+                        <label className='signup-cred-item'>Username:
                             <input type="text"
                                 placeholder='Username'
                                 value={this.state.username}
@@ -67,7 +67,7 @@ class SignupForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>Email:
+                        <label  className='signup-cred-item'> Email:
                             <input type="text"
                                 placeholder='Email'
                                 value={this.state.email}
@@ -76,7 +76,7 @@ class SignupForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>Password:
+                        <label  className='signup-cred-item'>Password:
                             <input type="password"
                                 placeholder='Password'
                                 value={this.state.password}
