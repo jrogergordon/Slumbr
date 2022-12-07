@@ -97,10 +97,9 @@
     transform: translateY(2px);
 }
 
-.transparent {
-    background-color: transparent;
-    width: 80px;
-    height: 60px;
+/* .cred-icons {
+    width: 100px;
+    height: 100px;
 }
 
 .nav-bar-credit-links {
@@ -108,10 +107,10 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    top: -80%;
+    top: 80%;
     max-width: 200px;
     left: 80%;
-}
+} */
 
 .content-links {
     position: relative;

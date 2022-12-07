@@ -1,0 +1,14 @@
+.cred-icons {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-bar-credit-links {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    top: 80%;
+    max-width: 200px;
+    left: 80%;
+}

@@ -165,6 +165,10 @@
     "which": "^2.0.2",
     "wildcard": "^2.0.0"
   },
+  "engines": {
+    "node": "16.5.0",
+    "npm": "8.5.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
@@ -182,3 +186,4 @@
   },
   "homepage": "https://github.com/jrogergordon/Tumbler#readme"
 }
+

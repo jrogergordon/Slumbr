@@ -9,7 +9,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <div className="greeting">
             {backgroundImage}
             <div id="greeting">
-            <h1 className="tumbler">Tumbler</h1>
+            <h1 className="tumbler">Slumbr</h1>
             <nav className="greeting-logged-out">
                     <button id="greeting-login" onClick={() => openModal('login')}>Login</button>
                     <button id="greeting-signup" onClick={() => openModal('signup')}>Signup</button>
