@@ -17,3 +17,5 @@ module Tumblr
     # the framework and any gems in your application.
   end
 end
+
+config.railties_order = [:all, :main_app]
