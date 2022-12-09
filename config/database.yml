@@ -78,8 +78,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: Tumblr_production
+#   username: Tumblr
+#   password: <%= ENV['TUMBLR_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: Tumblr_production
-  username: Tumblr
-  password: <%= ENV['TUMBLR_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

@@ -184,6 +184,6 @@
   "bugs": {
     "url": "https://github.com/jrogergordon/Tumbler/issues"
   },
-  "homepage": "https://github.com/jrogergordon/Tumbler#readme"
+  "homepage": "https://github.com/jrogergordon/Tumbler#readme",
+  "devDependencies": {}
 }
-
