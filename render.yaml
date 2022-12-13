@@ -14,7 +14,7 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "rails s"
     envVars:
-      - key: DATABASE_URL
+      - key: postgres://slumbr:uwxq9AHOKHgjMzW13NiePWAof2uYQhIG@dpg-ce9qg32rrk03t1l30a70-a/slumbr
         fromDatabase:
           name: slumbr
           property: connectionString
