@@ -1,0 +1,22 @@
+# databases:
+#   - name: slumbr
+#     user: slumbr
+#     plan: free
+#     region: ohio
+
+# services:
+#   - type: web
+#     name: slumbr
+#     plan: free
+#     region: ohio
+#     branch: main
+#     env: ruby
+#     buildCommand: "./bin/render-build.sh"
+#     startCommand: "rails s"
+#     envVars:
+#       - key: postgres://slumbr:uwxq9AHOKHgjMzW13NiePWAof2uYQhIG@dpg-ce9qg32rrk03t1l30a70-a/slumbr
+#         fromDatabase:
+#           name: slumbr
+#           property: connectionString
+#       - key: RAILS_MASTER_KEY
+#         sync: false
