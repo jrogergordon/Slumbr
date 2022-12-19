@@ -11,7 +11,6 @@ import CreatePicPostContainer from "./create_modals/pic_posts/create_pic_contain
 import EditTextModalContainer from "./edit_modals/edit_text_modal_container.js";
 import EditLinkModalContainer from "./edit_modals/edit_link_modal_container.js";
 import EditQuoteModalContainer from "./edit_modals/edit_quote_modal_container.js";
-import EditPicModalContainer from "./edit_modals/edit_photo_modal.js"
 
 function Modal({ modal, closeModal }) {
     if (!modal) {

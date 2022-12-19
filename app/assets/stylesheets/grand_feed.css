@@ -63,8 +63,8 @@
 
 #post-avatar {
 object-fit: cover;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
 }
 
@@ -164,16 +164,4 @@ object-fit: cover;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: 2px solid blue;
     color: blue;
-}
-
-.photo-post-img {
-    width: 100%;
-    height: 10%;
-    position: relative;
-    left: -3.7%;
-}
-
-#all-posts {
-    position: relative;
-    left: -10%;
 }

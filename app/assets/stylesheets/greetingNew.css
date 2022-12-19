@@ -10,7 +10,7 @@
 
 .loggedout {
     box-sizing: border-box;
-    height: 80px;
+    height: 54px;
     justify-content: space-between;
     margin: auto;
     max-width: 1716px;
@@ -18,8 +18,7 @@
     padding-right: 20px;
     width: 100%;
     padding-top: 10px;
-    border-color: white; 
-    border-bottom: 3px solid gray;   
+    border-color: white;    
 }
 
 .header-button-login {
@@ -95,6 +94,7 @@
     background-color: #48abe0;
     box-shadow: 0 0 2px darkslategray;
     transform: translateY(2px);
+<<<<<<< HEAD
 }
 
 /* .cred-icons {
@@ -120,4 +120,6 @@
     max-width: 200px;
     left: 40%;
     top: -115px;
+=======
+>>>>>>> parent of e5c4ab9... greenlit!
 }

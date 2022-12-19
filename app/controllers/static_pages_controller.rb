@@ -5,7 +5,5 @@ class StaticPagesController < ApplicationController
     render file: Rails.root.join('public', 'index.html')
   end
 
-  # //...
-
 
 end

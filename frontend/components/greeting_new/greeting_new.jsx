@@ -21,6 +21,7 @@ const GreetingNew = ({ currentUser, logout }) => {
             <div className='loggedin'>
                 <button className="header-button-logout" onClick={logout}>Log Out</button>
             </div>
+<<<<<<< HEAD
             {/* <div className='nav-bar-credit-links'>
                 <div>
                     <a href="https://www.linkedin.com/in/jacobrogergordon/"><img className="cred-icons" src={window.linkedIn} /></a>
@@ -43,6 +44,8 @@ const GreetingNew = ({ currentUser, logout }) => {
             </div> */} 
 
 
+=======
+>>>>>>> parent of e5c4ab9... greenlit!
         </hgroup>
     );
 

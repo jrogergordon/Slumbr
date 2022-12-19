@@ -3,7 +3,7 @@
     padding: 30px;
     height: 200px;
     border-radius: 10%;
-    background-color: rgb(38, 85, 130);
+    background-color: rgb(83, 209, 83);
     border: 2px solid black;
 }
 
@@ -17,12 +17,6 @@
     border-radius: 10%;
 }
 
-#close-signup-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px rgb(90, 89, 89);
-    background-color: rgb(108, 22, 22);
-}
-
 .signup-credentials {
     display: flex;
     align-items: center;
@@ -32,7 +26,6 @@
     position: relative;
     left: 10%;
     top: -20px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 #demo-signup {
@@ -47,32 +40,5 @@
 
 .signup-title {
     border-bottom: 2px solid wheat;
-    width: 190px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.signup-cred-item {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#signup-button {
-    background-color: rgb(25, 226, 75);
-}
-
-#signup-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px rgb(90, 89, 89);
-    background-color: rgb(32, 94, 42);
-}
-
-#demo-signup {
-    background-color: white;
-}
-
-#demo-signup:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px rgb(90, 89, 89);
-    background-color: rgba(250, 235, 215, 0.144);
+    width: 160px;
 }

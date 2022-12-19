@@ -9,6 +9,3 @@ json.likes post.likes.count
 json.liked post.likers_ids.include?(current_user.id)
 json.followed post.followers_ids.include?(current_user.id)
 
-if post.photo.attached?
-    json.photoUrl url_for(post.photo)
-end 
