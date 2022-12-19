@@ -21,12 +21,9 @@ const GreetingNew = ({ currentUser, logout }) => {
             <div className='loggedin'>
                 <button className="header-button-logout" onClick={logout}>Log Out</button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* <div className='nav-bar-credit-links'>
-=======
+
             <div className='nav-bar-credit-links'>
->>>>>>> parent of a8c6eb7... new heroku
+
                 <div>
                     <a href="https://www.linkedin.com/in/jacobrogergordon/"><img className="transparent" src={window.linkedIn} /></a>
                 </div>
@@ -47,9 +44,6 @@ const GreetingNew = ({ currentUser, logout }) => {
                 </div>
             </div>
 
-
-=======
->>>>>>> parent of e5c4ab9... greenlit!
         </hgroup>
     );
 
