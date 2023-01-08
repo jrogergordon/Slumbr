@@ -25,22 +25,22 @@ const GreetingNew = ({ currentUser, logout }) => {
             <div className='nav-bar-credit-links'>
 
                 <div>
-                    <a href="https://www.linkedin.com/in/jacobrogergordon/"><img className="transparent" src={window.linkedIn} /></a>
+                    <a href="https://www.linkedin.com/in/jacobrogergordon/"><img className="credits" src={window.linkedIn} /></a>
                 </div>
                 <div>
-                    <a href="https://github.com/jrogergordon"><img className="transparent" src={window.github} /></a>
+                    <a href="https://github.com/jrogergordon"><img className="credits" src={window.github} /></a>
                 </div>
                 <div>
-                    <a href="https://angel.co/u/jacob-roger-gordon"><img className="transparent" src={window.angelist} /></a>
+                    <a href="https://angel.co/u/jacob-roger-gordon"><img className="credits" src={window.angelist} /></a>
                 </div>
             </div>
 
             <div className='content-links'>
                 <div>
-                    <Link to="/feed"><img className="transparent" src={window.following} /></Link>
+                    <Link to="/feed"><img className="directory" src={window.following} /></Link>
                 </div>
                 <div>
-                    <Link to="/explore"><img className="transparent" src={window.explore} /></Link>
+                    <Link to="/explore"><img className="directory" src={window.explore} /></Link>
                 </div>
             </div>
 
