@@ -65,3 +65,15 @@ export const unlikePost = id => dispatch => {
     return PostApiUtil.deleteLike(id)
         .then(post => dispatch(receivePost(post)));
 };
+
+export const createMediaPost = (formData) => dispatch => {
+    return MediaApiUtil.createMediaPost(formData).then((post) => {
+        return dispatch(receivePost(post.post))
+    })
+}
+
+export const editMediaPost = (formData, post) => dispatch => {
+    return MediaApiUtil.editMediaPost(formData, post).then((post) => {
+        return dispatch(receivePost(post))
+    })
+}

@@ -138,7 +138,7 @@ class FeedPostsItem extends React.Component {
             } else return (
                 <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.content}</a>
             );
-        } else if (this.props.post.post_type === "image") {
+        } else if (this.props.post.post_type === "photo") {
             return (
                 <div className='post-content'>
                     <div className='photo-post-title'>
@@ -151,7 +151,7 @@ class FeedPostsItem extends React.Component {
                         {this.props.post.content}
                     </div>
                 </div>
-            ) 
+            )
         }
     }
 

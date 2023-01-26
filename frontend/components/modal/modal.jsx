@@ -35,15 +35,15 @@ function Modal({ modal, closeModal }) {
         component = <CreateLinkPostContainer />;
     } else if (modal[0] === "edit_link") {
         component = <EditLinkModalContainer
-            post={modal[1]} />
+            post={modal[1]} />;
     } else if (modal[0] === "edit_quote") {
         component = <EditQuoteModalContainer
-            post={modal[1]} />
+            post={modal[1]} />;
     } else if (modal === "create-photo") {
-        component = <CreatePicPostContainer />
+        component = <CreatePicPostContainer />;
     } else if (modal[0] === 'edit_photo') {
         component = <EditPicModalContainer
-            post={modal[1]} />
+            post={modal[1]} />;
     }
     
     return (
