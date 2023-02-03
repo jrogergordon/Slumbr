@@ -14,7 +14,7 @@ class FeedPostsItem extends React.Component {
 
     }
 
-
+ 
     likeButton() {
         if (this.props.post.author_id !== this.props.currentUserId) {
             if (this.props.post.liked) {
