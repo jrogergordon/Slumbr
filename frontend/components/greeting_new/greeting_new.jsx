@@ -23,26 +23,25 @@ const GreetingNew = ({ currentUser, logout }) => {
             </div>
 
             <div className='nav-bar-credit-links'>
-
                 <div>
-                    <a href="https://www.linkedin.com/in/jacobrogergordon/"><img className="credits" src={window.linkedIn} /></a>
+                    <a href="https://angel.co/u/jacob-roger-gordon"><img className="credits" src={window.angelist} /></a>
                 </div>
                 <div>
                     <a href="https://github.com/jrogergordon"><img className="credits" src={window.github} /></a>
                 </div>
                 <div>
-                    <a href="https://angel.co/u/jacob-roger-gordon"><img className="credits" src={window.angelist} /></a>
+                    <a href="https://www.linkedin.com/in/jacobrogergordon/"><img className="credits" src={window.linkedIn} /></a>
                 </div>
             </div>
 
-            <div className='content-links'>
+            {/* <div className='content-links'>
                 <div>
                     <Link to="/feed"><img className="directory" src={window.following} /></Link>
                 </div>
                 <div>
                     <Link to="/explore"><img className="directory" src={window.explore} /></Link>
                 </div>
-            </div>
+            </div> */}
 
         </hgroup>
     );

@@ -107,13 +107,14 @@
 }
 
 .nav-bar-credit-links {
-    position: relative;
+    position: fixed;
     align-items: center;
     display: flex;
-    justify-content: center;
-    top: -80%;
+    justify-content: space-between;
+    top: 90%;
     max-width: 200px;
     left: 80%;
+    z-index: 999;
 }
 
 .content-links {
