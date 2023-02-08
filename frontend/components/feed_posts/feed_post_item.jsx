@@ -101,8 +101,20 @@ class FeedPostsItem extends React.Component {
                         Likes: {this.props.post.likes}
                 </div>
                 )
-            } else if (this.props.post.post_type === "image") {
-                return (7);
+            } else if (this.props.post.post_type === "photo") {
+                return (
+                    <div>
+                        <button className="delete-post-button"
+                            onClick={() => this.props.openModal(["delete_confirm", this.props.post])} >
+                            &nbsp; <img className='trash-button' src={window.trash} />
+                        </button>
+                        <button className='edit-post-button'
+                            onClick={() => this.props.openModal(["edit_photo", this.props.post])} >
+                            <img className='trash-button' src={window.edit} />
+                        </button>
+                        Likes: {this.props.post.likes}
+                    </div>
+                );
             }
         }
     }
