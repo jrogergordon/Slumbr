@@ -67,6 +67,7 @@ export const unlikePost = id => dispatch => {
         .then(post => dispatch(receivePost(post)));
 };
 
+
 export const createMediaPost = (formData) => dispatch => {
     return MediaApiUtil.createMediaPost(formData).then((post) => {
         return dispatch(receivePost(post.post))
