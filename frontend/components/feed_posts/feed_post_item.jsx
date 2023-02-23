@@ -247,3 +247,4 @@ class FeedPostsItem extends React.Component {
 }
 
 export default FeedPostsItem;
+//
