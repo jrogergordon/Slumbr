@@ -6,6 +6,7 @@ class CreatePicPostForm extends React.Component {
         this.state = {
             post: this.props.post,
             photoFile: null,
+            photoUrl: null,
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
