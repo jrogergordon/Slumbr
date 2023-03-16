@@ -169,8 +169,8 @@ class FeedPostsItem extends React.Component {
 
     render() {
         // let avtUrl;
-        // if (this.props.users.length < 10) {
-        //     return "";
+        if (this.props.users.length < 10) {
+            return "";
         // } else {
         //     switch (this.props.users[(this.props.post.author_id) - 1].avatar_image) {
         //         case "G":
@@ -208,10 +208,10 @@ class FeedPostsItem extends React.Component {
         return (
             <div className='feed-post-container'>
                 <div className="feed-post-item">
-                    <div className='user-avatar'>
-                        {/* <img id="post-avatar" 
-                            src={avtUrl} /> */}
-                    </div>
+                    {/* <div className='user-avatar'>
+                        <img id="post-avatar" 
+                            src={avtUrl} />
+                    </div> */}
                     <div className='avatar-post-space'>
                     </div>
                     <li className="feed-item">
