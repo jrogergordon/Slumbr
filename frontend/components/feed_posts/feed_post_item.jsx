@@ -168,7 +168,7 @@ class FeedPostsItem extends React.Component {
     }
 
     render() {
-        let avtUrl;
+        // let avtUrl;
         // if (this.props.users.length < 1) {
         //     return "";
         // } else {
