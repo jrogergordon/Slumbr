@@ -7,7 +7,7 @@ class SignupForm extends React.Component {
             username: '',
             password: '',
             email: '',
-            avatar_image: 'O',
+            avatar_image: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
@@ -29,6 +29,7 @@ class SignupForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.state.avatar_image = 'P';
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
