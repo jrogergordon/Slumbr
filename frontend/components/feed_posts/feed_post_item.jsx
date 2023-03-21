@@ -208,10 +208,10 @@ class FeedPostsItem extends React.Component {
         return (
             <div className='feed-post-container'>
                 <div className="feed-post-item">
-                    {/* <div className='user-avatar'>
+                    <div className='user-avatar'>
                         <img id="post-avatar" 
                             src={avtUrl} />
-                    </div> */}
+                    </div>
                     <div className='avatar-post-space'>
                     </div>
                     <li className="feed-item">
