@@ -168,38 +168,38 @@ class FeedPostsItem extends React.Component {
     }
 
     render() {
-        // let avtUrl;
-        // if (this.props.users.length < 1) {
-        //     return "";
-        // } else {
-        //     switch (this.props.users[(this.props.post.author_id) - 1].avatar_image) {
-        //         case "G":
-        //             avtUrl = window.avtGlenn;
-        //             break;
-        //         case "D":
-        //             avtUrl = window.avtDog;
-        //             break;
-        //         case "C":
-        //             avtUrl = window.avtCows;
-        //             break;
-        //         case "O":
-        //             avtUrl = window.avtOctopus;
-        //             break;
-        //         case "P":
-        //             avtUrl = window.avtPizza;
-        //             break;
-        //         case "R":
-        //             avtUrl = window.avtPrincess;
-        //             break;
-        //         case "B":
-        //             avtUrl = window.avtRobot;
-        //             break;
-        //         case "S":
-        //             avtUrl = window.avtSword;
-        //             break;
-        //         case "T":
-        //             avtUrl = window.avtTurtle;
-        //     }       
+        let avtUrl;
+        if (this.props.users.length < 1) {
+            return "";
+        } else {
+            switch (this.props.users[(this.props.post.author_id) - 1].avatar_image) {
+                case "G":
+                    avtUrl = window.avtGlenn;
+                    break;
+                case "D":
+                    avtUrl = window.avtDog;
+                    break;
+                case "C":
+                    avtUrl = window.avtCows;
+                    break;
+                case "O":
+                    avtUrl = window.avtOctopus;
+                    break;
+                case "P":
+                    avtUrl = window.avtPizza;
+                    break;
+                case "R":
+                    avtUrl = window.avtPrincess;
+                    break;
+                case "B":
+                    avtUrl = window.avtRobot;
+                    break;
+                case "S":
+                    avtUrl = window.avtSword;
+                    break;
+                case "T":
+                    avtUrl = window.avtTurtle;
+            }       
 
 
 
@@ -242,7 +242,7 @@ class FeedPostsItem extends React.Component {
                 <div id="space-between-posts" />
             </div>
         );
-    // }
+    }
     }
 }
 
