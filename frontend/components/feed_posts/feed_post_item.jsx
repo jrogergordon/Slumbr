@@ -221,14 +221,14 @@ class FeedPostsItem extends React.Component {
                                
                             </div>
                             {this.renderPost()}
-                            {/* <div className="post-content">
+                            <div className="post-content">
                                 <h3 className="post-title">
                                     {this.props.post.title}
                                 </h3>
                                 <p readOnly className="post-body">
                                     {this.props.post.content}
                                 </p>
-                            </div> */}
+                            </div>
 
                             <div className="post-footer">
                                 {this.likeButton()}
