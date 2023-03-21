@@ -28,6 +28,7 @@ class SignupForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        user.avatar_image = "G";
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
