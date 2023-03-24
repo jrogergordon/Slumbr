@@ -87,6 +87,14 @@ class SignupForm extends React.Component {
                                 className="signup-input-password"
                             />
                         </label>
+                        <label>Image:
+                            <input type="text"
+                                placeholder='avatar_image'
+                                value={this.state.avatar_image}
+                                onChange={this.update('avatar_image')}
+                                className="signup-input-password"
+                            />
+                        </label>    
                         </div>
                         </div>
                         <br />
