@@ -168,9 +168,8 @@ class FeedPostsItem extends React.Component {
     }
 
     render() {
-        debugger;
         let avtUrl;
-        if (this.props.users.length === 0) {
+        if (this.props.users.length === 7000000) {
             return "";
         } else {
             switch (this.props.users[(this.props.post.author_id) - 1].avatar_image) {
