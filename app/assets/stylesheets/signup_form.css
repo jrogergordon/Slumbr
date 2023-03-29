@@ -1,7 +1,7 @@
 .signup-form-container {
     width: 100%;
     padding: 30px;
-    height: 200px;
+    height: 50%;
     border-radius: 10%;
     background-color: rgb(83, 209, 83);
     border: 2px solid black;
@@ -41,4 +41,23 @@
 .signup-title {
     border-bottom: 2px solid wheat;
     width: 160px;
+}
+
+.image-graph {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+}
+
+#image-select-sentence {
+    padding-top: 10%;
+}
+
+.image-graph {
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.sub-avt-highlighted {
+    border: 5px solid rgb(190, 135, 32);
 }

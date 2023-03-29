@@ -11,6 +11,9 @@ class SignupForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+        this.updateAvatar = this.updateAvatar.bind(this);
+        this.isHighlighted = this.isHighlighted.bind(this);
+        this.whichImage = this.whichImage.bind(this);
     }
 
     handleDemo(e) {
@@ -25,6 +28,61 @@ class SignupForm extends React.Component {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+    }
+
+    updateAvatar(x) {
+        this.setState({
+            avatar_image: x
+        });
+    }
+
+    isHighlighted(x) {
+        if (this.state.avatar_image === '') {
+            this.state.avatar_image = x;
+        }
+        if(x === this.state.avatar_image) {
+            return (
+                <img className="sub-avt-highlighted" id="post-avatar" src={this.whichImage(x)} onClick={() => this.updateAvatar(x)} />
+            )
+        } else {
+            return (
+                <img id="post-avatar" src={this.whichImage(x)} onClick={() => this.updateAvatar(x)} />
+            )
+        }
+    }
+
+    whichImage(y) {
+        let avtUrl;
+        switch(y) {
+            case "G":
+                avtUrl = window.avtGlenn;
+                break;
+            case "D":
+                avtUrl = window.avtDog;
+                break;
+            case "C":
+                avtUrl = window.avtCows;
+                break;
+            case "O":
+                avtUrl = window.avtOctopus;
+                break;
+            case "P":
+                avtUrl = window.avtPizza;
+                break;
+            case "R":
+                avtUrl = window.avtPrincess;
+                break;
+            case "B":
+                avtUrl = window.avtRobot;
+                break;
+            case "S":
+                avtUrl = window.avtSword;
+                break;
+            case "T":
+                avtUrl = window.avtTurtle;
+                break;
+        }
+        return avtUrl;
     }
 
     handleSubmit(e) {
@@ -87,14 +145,31 @@ class SignupForm extends React.Component {
                                 className="signup-input-password"
                             />
                         </label>
-                        <label>Image:
+                        {/* <label>Image:
                             <input type="text"
                                 placeholder='avatar_image'
                                 value={this.state.avatar_image}
                                 onChange={this.update('avatar_image')}
                                 className="signup-input-password"
                             />
-                        </label>    
+                        </label>     */}
+                        <div className='image-select'>
+                            <div id="image-select-sentence">
+                                Select your Avatar:
+                            </div>
+                            <div className='image-graph'>                        
+                                {this.isHighlighted("G")}
+                                {this.isHighlighted("D")}
+                                {this.isHighlighted("C")}
+                                {this.isHighlighted("O")}
+                                {this.isHighlighted("P")}
+                                {this.isHighlighted("R")}
+                                {this.isHighlighted("B")}
+                                {this.isHighlighted("S")}
+                                {this.isHighlighted("T")}
+                            </div>
+                        </div>
+
                         </div>
                         </div>
                         <br />
