@@ -110,7 +110,7 @@ class SignupForm extends React.Component {
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <div className='signup-title'>
-                        Welcome to Tumbler!
+                        Welcome to Slumbr!
                     </div>
                     <br />
                     {this.renderErrors()}

@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="login-form">
-                        <h3 className='login-title'>Welcome to Tumbler!</h3>
+                        <h3 className='login-title'>Welcome to Slumbr</h3>
                         <button onClick={this.props.closeModal} className='button' id="close-login-button">x</button>
                         <br />
                         <ul className="errors-div">
