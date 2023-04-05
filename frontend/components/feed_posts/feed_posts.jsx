@@ -20,7 +20,7 @@ class FeedPosts extends React.Component {
             post={post}
             key={ post.id }
             users={this.props.users}
-            />)
+            />).reverse();
 
         return(
             <div className="feed-posts">

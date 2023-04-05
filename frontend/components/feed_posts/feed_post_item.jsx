@@ -145,10 +145,16 @@ class FeedPostsItem extends React.Component {
         } else if (this.props.post.post_type === "link") {
             if(this.props.post.title.length > 0) {
                 return (
-                    <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.title}</a>
+                    <p className='post-content'>
+                        <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.title}</a>
+                    </p>
+                    
                 )
             } else return (
-                <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.content}</a>
+                <p className='post-content'> 
+                    <a wrap="hard" className='post-link' href={this.props.post.content}>{this.props.post.content}</a>
+                </p>
+               
             );
         } else if (this.props.post.post_type === "photo") {
             return (
@@ -249,4 +255,3 @@ class FeedPostsItem extends React.Component {
 }
 
 export default FeedPostsItem;
-//

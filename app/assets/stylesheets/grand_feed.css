@@ -153,12 +153,12 @@ object-fit: cover;
 }
 
 .post-link {
-    min-height: 37px;
+    /* min-height: 37px;
     resize: none;
     width: 470px;
     position: relative;
     left: 5px;
-    border: none;
+    border: none; */
     font-size: 20px;
     word-wrap: break-word;
     font-family: 'Times New Roman', Times, serif;
