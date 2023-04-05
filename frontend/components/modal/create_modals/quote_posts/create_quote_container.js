@@ -5,7 +5,7 @@ import { closeModal } from '../../../../actions/modal_actions';
 
 const mSTP = ({ session, entities, errors }) => {
     return {
-        post: { title: "", content: "", post_type: "link", author_id: entities.users[session.id] },
+        post: { title: "", content: "", post_type: "quote", author_id: entities.users[session.id] },
         errors: errors.session,
         currentUser: entities.users[session.id],
     };
