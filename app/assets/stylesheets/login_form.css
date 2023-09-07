@@ -1,0 +1,75 @@
+.login-form-container {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 10%;
+    border-radius: 10%;
+    position: relative;
+    right: 10%;
+    background-color: rgb(48, 109, 215);
+    border: 2px solid black;
+}
+
+#close-login-button {
+    background-color: rgb(225, 37, 37);
+    font-size: 20px;
+    position: relative;
+    left: 88.84%;
+    top: -60px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10%;
+}
+
+#close-login-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px rgb(90, 89, 89);
+    background-color: rgb(108, 22, 22);
+}
+
+.login-title {
+    border-bottom: 2px solid wheat;
+    width: 190px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.login-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#login-button {
+    background-color: rgb(50, 84, 177);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#login-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px rgb(90, 89, 89);
+    background-color: rgb(17, 20, 84);
+}
+
+#demo-login {
+    min-width: 100px;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#demo-login:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px rgb(90, 89, 89);
+    background-color: rgb(86, 86, 86);
+}
+
+.login-credentials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    width: 400px;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}

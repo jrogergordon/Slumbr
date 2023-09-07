@@ -1,0 +1,179 @@
+#all-posts {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    right: 0px;
+}
+
+.feed-item {
+    background-color: white;
+    list-style: none;
+}
+
+#space-between-posts {
+    height: 30px;
+}
+
+.trash-button {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-post-button {
+    font-size: 38px;
+}
+
+.feed-post-item {
+    display: flex;
+    min-height: 200px;
+}
+
+.user-avatar {
+    height: 66px;
+    border-radius: 10px;
+}
+.feed-item {
+    border-radius: 5px;
+}
+
+.feed-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 540px;
+    background-color: white;
+}
+
+
+
+.post-body {
+    font-size: 12px;
+    resize: none;
+    border: none;
+    width: 400px;
+    padding-left: 10px;
+    word-wrap: break-word;
+}
+
+.avatar-post-space {
+    width: 20px;
+}
+
+#post-avatar {
+object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.post-author {
+    position: relative;
+    font-weight: bold;
+}
+
+.post-header {
+    padding-top: 10px;
+    position: relative;
+    height: 30px;
+}
+
+.post-content {
+    min-height: 100px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-text {
+    position: relative;
+    left: 20px;
+}
+
+.likes-count {
+    position: relative;
+    top: 10px;
+}
+
+.delete-my-post {
+    position: relative;
+    left: -25px;
+}
+
+.post-title {
+    font-size: 30px;
+    word-wrap: break-word;
+}
+
+#follow-button:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+#unfollow-button:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+#follow-button {
+    height: 25px;
+    background-color: #6588a9;
+}
+
+#unfollow-button {
+    width: 80px;
+    height: 25px;
+    background-color: #417ece;
+}
+
+#follow-button:active {
+    background-color: rgb(26, 54, 74);
+    box-shadow: 0 0 2px black;
+    transform: translateY(2px);
+}
+
+#unfollow-button:active {
+    background-color: rgb(23, 24, 71);
+    box-shadow: 0 0 2px black;
+    transform: translateY(2px);
+}
+
+.quote-post-title {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 10px;
+    
+}
+
+.quote-post-body {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.post-link {
+    /* min-height: 37px;
+    resize: none;
+    width: 470px;
+    position: relative;
+    left: 5px;
+    border: none; */
+    font-size: 20px;
+    word-wrap: break-word;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+
+.photo-post-img {
+    width: 100%;
+    height: 10%;
+    position: relative;
+    left: -3.7%;
+}
+
+#all-posts {
+    position: relative;
+    left: -10%;
+}

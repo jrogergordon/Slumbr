@@ -1,0 +1,24 @@
+.create-link-post-content {
+    resize: none;
+    width: 470px;
+    height: 200px;
+    position: relative;
+    border: none;
+    word-wrap: break-word;
+    background-color: white;
+    top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.create-link-post-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: large;
+    min-height: 37px;
+    border: none;
+    position: relative;
+    width: 460px;
+    word-wrap: break-word;
+    resize: none;
+}

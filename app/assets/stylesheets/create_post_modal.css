@@ -1,0 +1,123 @@
+.create-text-post-modal {
+    max-height: 180px;
+    width: 240px;
+
+    padding: 150px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#post-creation {
+    position: relative;
+    left: -130px; 
+    top: 2px;
+}
+
+
+.delete-post-creation {
+    border-radius: 3px;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+
+.submission-buttons {
+    display: flex;
+}
+
+.delete-post-creation {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10%;
+}
+
+.delete-post-creation:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+.submit-post {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10%;
+}
+
+.submit-post:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+.create-post-title {
+    min-height: 37px;
+    border: none;
+    position: relative;
+    width: 500px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.create-post-content {
+    resize: none;
+    width: 470px;
+    height: 200px;
+    font-size: 18px;
+    position: relative;
+    left: 5px;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#post-creation {
+    position: relative;
+    top: -80px;
+}
+
+#creation-username {
+    position: relative;
+    left: -130px;
+    top: -120px;
+    border-bottom: 4px solid lightgray;
+}
+
+.submission-buttons {
+    left: -130px;
+    width: 500px;
+    position: relative;
+    top: 0px;
+    /* box-sizing: border-box;
+    border-left: 200px; */
+    border-top: 1px solid gray;
+}
+
+.submit-post {
+    position: relative;
+    left: 420px;
+    top: 10px;
+}
+
+.delete-post-creation {
+    position: relative;
+    right: 80px;
+    top: 10px;
+}

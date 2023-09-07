@@ -1,0 +1,26 @@
+.create-quote-post-content {
+    min-height: 37px;
+    resize: none;
+    width: 470px;
+    padding-bottom: 46%;
+    position: relative;
+    left: 5px;
+    border: none;
+    font-size: 40px;
+    word-wrap: break-word;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.create-quote-post-title {
+    min-height: 37px;
+    border: none;
+    position: relative;
+    left: 40px;
+    width: 460px;
+    font-style: italic;
+    word-wrap: break-word;
+    background-color: white;
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+}
