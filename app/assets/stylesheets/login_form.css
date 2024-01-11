@@ -20,7 +20,7 @@
     border-radius: 10%;
 }
 
-#close-login-button:active { 
+#close-login-button:active {  
     transform: translateY(2px);
     box-shadow: 0 2px rgb(90, 89, 89);
     background-color: rgb(108, 22, 22);
